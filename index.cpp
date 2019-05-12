@@ -4,10 +4,7 @@
 #include <math.h>
 #include "Vec3.cpp"
 
-inline const char * const boolToString(bool b)
-{
-  return b ? "true" : "false";
-}
+auto boolToString = [](bool a) -> const char * { return a ? "true" : "false"; };
 
 auto glambda = [](auto a, auto&& b) { return a < b; };
 
