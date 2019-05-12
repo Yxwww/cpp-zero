@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "Vec3.cpp"
 
 int main (int argc, char *argv[])
 {

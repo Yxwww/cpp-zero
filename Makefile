@@ -1,4 +1,9 @@
 .PHONY: build
 
+BUILD_DIR = build/default
+
 build:
-	cd build/default && ninja
+	cd $(BUILD_DIR) && ninja
+
+setup:
+	mkdir -p $(BUILD_DIR) && cd $(BUILD_DIR) && cmake -GNinja ../../
