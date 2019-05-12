@@ -4,17 +4,19 @@
 #include <math.h>
 #include "Vec3.cpp"
 
+inline const char * const boolToString(bool b)
+{
+  return b ? "true" : "false";
+}
+
+auto glambda = [](auto a, auto&& b) { return a < b; };
+
 int main (int argc, char *argv[])
 {
-  if (argc < 2)
-  {
-    fprintf(stdout,"Usage: %s number\n",argv[0]);
-    return 1;
-  }
-  double inputValue = atof(argv[1]);
-  double outputValue = sqrt(inputValue);
-  fprintf(stdout,"The square root of %g is %g\n",
-          inputValue, outputValue);
-  return 0;
+  Vec3<float> a; 
+  fprintf(stdout,"Vec (%f, %f, %f)\n", a.x, a.y, a.z);
+
+  bool b = glambda(3, 3.14); // ok
+  fprintf(stdout,"b: %s \n", boolToString(b));
 }
 
